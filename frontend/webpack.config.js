@@ -50,7 +50,9 @@ module.exports = (options = {}) => ({
   ],
   resolve: {
     alias: {
-      '~': resolve(__dirname, 'src')
+      '~': resolve(__dirname, 'src'),
+      // http://www.imooc.com/article/17868  fix warn:You are using the runtime-only build of Vue where the template compiler is not available. Either pre-compile the templates into render functions, or use the compiler-included build.
+      'vue': 'vue/dist/vue.js'
     }
   },
   devServer: {
